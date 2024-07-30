@@ -1,0 +1,134 @@
+
+
+/* apply a basic css rule for every element */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+/* setting up the elements */
+.main_box{
+    background:url(photo.jpg);
+    height: 100vh;
+background-size: cover;
+}
+.btn_one{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px ;
+    line-height: 60px;
+}
+.sidebar_menu{
+    position: fixed;
+    left:-900px  ;
+    height: 100vh;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.372);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) ;
+    transition: all 0.5s linear;
+}
+.sidebar_menu .logo{
+position: absolute;
+width: 100%;
+line-height: 60px;
+box-shadow: 0 2px 3px rgba(255, 255, 255, 0.5) ;
+height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 50px;
+}
+.sidebar_menu .btn_two{
+   
+        color: grey;
+        font-size: 25px;
+        font-weight: 100;
+        position: absolute;
+        left: 270px ;
+        line-height: 60px;
+        opacity: 0;   
+}
+/* making the sidebar menu  */
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+.sidebar_menu .menu li{
+    margin-top: 10px;
+    padding: 15px 25px;
+} 
+.sidebar_menu .menu li,a{
+    text-decoration: none;
+    color: white ;
+    font-size: 20px;
+}
+.sidebar_menu .menu i{
+    padding-right: 10px ;
+}
+.sidebar_menu .social_media{
+    position: absolute;
+    left: 25%;
+    bottom: 25px;
+}
+.sidebar_menu .social_media i{
+    color: rgba(255, 255, 255, 0.482);
+}
+#check{
+    display: none;
+}
+/* hover states */
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) ;
+    color: black;
+ }
+.sidebar_menu .menu a:hover{
+      color: black;
+
+}
+.btn_two i:hover , .btn_one i:hover{
+   transform: scale(1.1);
+   color: white;
+    cursor:pointer;
+    transition: all 0.5s linear;
+}
+.social_media ul a i:hover{
+ color: black;
+ transform: scale(1.2);
+}
+/* important task for this project add functionality to the button to perform any a task using solid css no js  */
+
+#check:checked ~ .sidebar_menu {
+        left:0 ;
+}
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two{
+    opacity: 1;
+}
+@media screen and (min-width: 375px) {
+    .sidebar_menu { 
+        width: 400px;
+    height: 100vh;}
+    .sidebar_menu .btn_two {
+        left: 330px;
+        color: white;
+    }
+    .sidebar_menu {
+        left: -450px;
+    }
+   
+    .sidebar_menu .social_media {
+        left: 40%;
+        color: white;
+    }
+  }
+ 
+  
